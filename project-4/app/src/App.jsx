@@ -1,5 +1,30 @@
+import styled from "styled-components";
 const App = () => {
-  return <div>App</div>;
+  return (
+    <Container>
+      <TopContainer>
+        <div className="logo">
+           <img src="/logo.svg" alt="logo" />
+        </div>
+
+        <div>
+            <input type="text" placeholder="So, what do you feel like?" />
+        </div>
+      </TopContainer>
+    </Container>
+  )
 };
 
 export default App;
+
+const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+`;
+const TopContainer = styled.section`
+  min-height: 140px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  align-items: center;
+`;
